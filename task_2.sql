@@ -23,11 +23,11 @@ CREATE TABLE IF NOT EXISTS Orders (
     order_date DATE NOT NULL DEFAULT (CURDATE()),
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE CASCADE
 );
-CREATE TABLE IF NOT EXISTS Order_details (
+CREATE TABLE IF NOT EXISTS Order_Details (
     orderdetail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity INT NOT NULL CHECK (QUANTITY > 0),
+    quantity DOUBLE NOT NULL CHECK (QUANTITY > 0),
     FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE
 );
