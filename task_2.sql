@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS Books (
     publication_date DATE,
     FOREIGN KEY (author_id) REFERENCES AUTHORS(author_id) ON DELETE SET NULL
 );
-CREATE TABLE IF NOT EXISTS customers (
+CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) UNIQUE NOT NULL,
