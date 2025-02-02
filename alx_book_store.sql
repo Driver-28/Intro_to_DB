@@ -1,5 +1,5 @@
-CREATE DATABASE online_bookstore;
-USE online_bookstore;
+CREATE DATABASE alx_book_store;
+USE alx_book_store;
 CREATE TABLE Books (
     book_id int AUTO_INCREMENT Primary Key,
     title VARCHAR(130) NOT NULL,
